@@ -11,8 +11,8 @@
 // to get a pointer to a Conn:
 //
 //  var upgrader = websocket.Upgrader{
-//      ReadBufferSize:  1024,
-//      WriteBufferSize: 1024,
+//      ReadBufferSize:  4096,
+//      WriteBufferSize: 4096,
 //  }
 //
 //  func handler(w http.ResponseWriter, r *http.Request) {
