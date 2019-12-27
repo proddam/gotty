@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/yudai/hcl/hcl"
+	"github.com/proddam/hcl/hcl"
 )
 
 //line parse.y:15
