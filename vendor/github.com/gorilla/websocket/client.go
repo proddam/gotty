@@ -90,7 +90,7 @@ type Dialer struct {
 	HandshakeTimeout time.Duration
 
 	// Input and output buffer sizes. If the buffer size is zero, then a
-	// default value of 4096 is used.
+	// default value of 8192 is used.
 	ReadBufferSize, WriteBufferSize int
 
 	// Subprotocols specifies the client's requested subprotocols.
@@ -256,7 +256,7 @@ func (d *Dialer) Dial(urlStr string, requestHeader http.Header) (*Conn, *http.Re
 			// Before closing the network connection on return from this
 			// function, slurp up some of the response to aid application
 			// debugging.
-			buf := make([]byte, 4096)
+			buf := make([]byte, 8192)
 			n, _ := io.ReadFull(resp.Body, buf)
 			resp.Body = ioutil.NopCloser(bytes.NewReader(buf[:n]))
 		}

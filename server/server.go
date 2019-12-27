@@ -73,8 +73,8 @@ func New(factory Factory, options *Options) (*Server, error) {
 		options: options,
 
 		upgrader: &websocket.Upgrader{
-			ReadBufferSize:  4096,
-			WriteBufferSize: 4096,
+			ReadBufferSize:  8192,
+			WriteBufferSize: 8192,
 			Subprotocols:    webtty.Protocols,
 			CheckOrigin:     originChekcer,
 		},

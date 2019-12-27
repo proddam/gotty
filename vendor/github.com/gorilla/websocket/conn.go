@@ -23,8 +23,8 @@ const (
 	maskBit                    = 1 << 7
 	writeWait                  = time.Second
 
-	defaultReadBufferSize  = 4096
-	defaultWriteBufferSize = 4096
+	defaultReadBufferSize  = 8192
+	defaultWriteBufferSize = 8192
 
 	continuationFrame = 0
 	noFrame           = -1
